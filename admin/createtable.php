@@ -1,13 +1,13 @@
 <?php
 include "config.php";
 
-// $sql = "DROP TABLE data ";
-// $res = $conn->query($sql);
-// if($res){
-// 	echo "Yes DROP ";
-// }else{
-// 	echo "No DROP ";
-// }
+$sql = "DROP TABLE data ";
+$res = $conn->query($sql);
+if($res){
+	echo "Yes DROP ";
+}else{
+	echo "No DROP ";
+}
 
 $sql = "CREATE TABLE data (
     id int(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
