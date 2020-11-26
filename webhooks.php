@@ -21,7 +21,7 @@ if (!is_null($events['events'])) {
 			## เปิดสำหรับใช้่งาน mysql message
 			// $text = searchMessage($text ,$conn);
 			// $messages = setText($text);
-			$messages = setFlex($text);
+			$messages = setText($text);
 			sentToLine($replyToken, $access_token, $messages);
 		}
 	}
@@ -30,10 +30,10 @@ if (!is_null($events['events'])) {
 
 function setText($text)
 {
-	$messages = [
-		'type' => 'text',
-		'text' => $text
-	];
+	$messages = '{
+		"type": "text",
+		"text": "'.$text.'"
+	}';
 	return $messages;
 }
 
