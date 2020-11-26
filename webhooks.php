@@ -19,9 +19,9 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			$replyToken = $event['replyToken'];
 			## เปิดสำหรับใช้่งาน mysql message
-			// $text = searchMessage($text ,$conn);
-			// $messages = setText($text);
+			$text = searchMessage($text ,$conn);
 			$messages = setText($text);
+			// $messages = setFlex($text);
 			sentToLine($replyToken, $access_token, $messages);
 		}
 	}
